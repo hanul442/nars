@@ -1,0 +1,15 @@
+version: v1
+
+ranking:
+  formula: "log(freq) * frequency_log_weight + sqrt(freq) * frequency_sqrt_weight + urgent_bonus"
+  frequency_log_weight: 12
+  frequency_sqrt_weight: 2
+  urgent_bonus: 8
+
+selection:
+  cutoff: 20
+  max_items: 80
+
+notes:
+  - "freq must be calculated after duplicate suppression and event clustering"
+  - "ranking score represents information priority, not investment conviction"
